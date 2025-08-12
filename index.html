@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Recados - Post.It</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">P</div>
+                <h1>Post.it</h1>
+            </div>
+            <div class="ordenacao">
+                <button id="btn-ordenar" class="btn-ordenar">
+                    Ordenar <span class="arrow">›</span>
+                </button>
+                <div id="dropdown" class="dropdown">
+                    <div class="dropdown-option" data-ordem="recentes">
+                        <i class="fas fa-sort-amount-down"></i> Mais Recentes
+                    </div>
+                    <div class="dropdown-option" data-ordem="antigos">
+                        <i class="fas fa-sort-amount-up"></i> Mais Antigos
+                    </div>
+                    <div class="dropdown-option" data-ordem="alfabetica">
+                        <i class="fas fa-sort-alpha-down"></i> Ordem Alfabética
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main class="mural-container">
+            <ul id="mural-lista"></ul>
+            <div id="loading" class="loading">Carregando recados</div>
+        </main>
+    </div>
+    
+    <button id="btn-add" class="btn-add">
+        <i class="fas fa-plus"></i>
+    </button>
+    
+    <div id="modal-add" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Nova Postagem</h2>
+            <input type="text" id="input-autor" placeholder="Seu nome">
+            <textarea id="input-mensagem" placeholder="Sua mensagem"></textarea>
+            <div class="modal-actions">
+                <button id="btn-salvar" class="btn-confirm">Adicionar</button>
+                <button id="btn-cancelar" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script  src="script.js"></script>
+</body>
+</html>
